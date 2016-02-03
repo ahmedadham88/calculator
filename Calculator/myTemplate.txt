@@ -1,0 +1,19 @@
+//alert("javascript connected!");
+
+function restCall(){
+
+        $.ajax({
+          url: "http://142.133.141.28:9090/cscl-rest/cscl/v1/search/profiles/",
+          dataType: 'json',
+          type: "POST",
+          data: '{"323591":"global"}',
+          contentType: "application/json",
+          success: function(data) {
+            alert(JSON.stringify(data))
+          },
+          error: function(e) {
+            alert(e);
+          }
+        });
+
+};
